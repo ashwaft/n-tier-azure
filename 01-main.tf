@@ -16,7 +16,7 @@ provider "azurerm" {
 # Reference  : https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group
 # Description: Azure automatically deletes any Resources nested within the Resource Group when a Resource Group is deleted.
 resource "azurerm_resource_group" "rg" {
-  name     = "${local.group_name}-rg"
+  name     = "${local.environment}-${local.group_name}-rg"
   location = var.resource_group_location
   tags = local.common_tags
 }
