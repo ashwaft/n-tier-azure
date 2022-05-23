@@ -75,3 +75,8 @@ variable "ag_subnet_address" {
 }
 /********************* END OF DB SUBNET VAR **********************/
 
+variable "environment" {
+  description = "Environment Variable"
+  type = string
+  default = "dev"
+}
