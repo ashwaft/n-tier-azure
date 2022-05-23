@@ -6,7 +6,7 @@ vnet_address_space = ["10.4.0.0/16"]
 uisubnet_name = "uisubnet"
 uisubnet_address = ["10.4.1.0/24"]
 
-apisubnet_name = "appsubnet"
+apisubnet_name = "apisubnet"
 apisubnet_address = ["10.4.11.0/24"]
 
 db_subnet_name = "dbsubnet"

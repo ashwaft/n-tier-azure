@@ -48,19 +48,19 @@ locals {
   http_setting_name_api         = "ag-instance-be-htst-api"
   listener_name_api             = "ag-instance-listener-api"
   request_routing_rule_api      = "ag-instance-routing-rule-api"
-  # probe_name_api                = "ag-instance-probe-api"
+  probe_name_api                = "ag-instance-probe-api"
 
   # REACT
   backend_address_pool_name_ui = "ag-instance-ui-address-pool"
   http_setting_name_ui         = "ag-instance-be-htst-ui"
   listener_name_ui             = "ag-instance-listener-ui"
   request_routing_rule_ui      = "ag-instance-routing-rule-ui"
-  # probe_name_ui                = "ag-instance-probe-ui"
+  probe_name_ui                = "ag-instance-probe-ui"
 
   azure_username   = "azureuser"
   azure_public_key = file("${path.module}/ssh-key/terraform-azure.pub")
   environment = var.environment
-  
+
   common_tags = {
     environment = local.environment
   }

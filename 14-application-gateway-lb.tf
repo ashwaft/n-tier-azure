@@ -50,19 +50,19 @@ resource "azurerm_application_gateway" "ag-instance" {
     port                  = 80
     protocol              = "Http"
     request_timeout       = 60
-    # probe_name            = local.probe_name_api
+    probe_name            = local.probe_name_api
   }
 
-  # probe {
-  #   name                = local.probe_name_api
-  #   host                = "127.0.0.1"
-  #   interval            = 30
-  #   timeout             = 30
-  #   unhealthy_threshold = 3
-  #   protocol            = "Http"
-  #   port                = 80
-  #   path                = "/api/healthcheck.html"
-  # }
+  probe {
+    name                = local.probe_name_api
+    host                = "127.0.0.1"
+    interval            = 30
+    timeout             = 30
+    unhealthy_threshold = 3
+    protocol            = "Http"
+    port                = 80
+    path                = "/api/healthcheck.html"
+  }
 
   # UI
   http_listener {
@@ -82,18 +82,18 @@ resource "azurerm_application_gateway" "ag-instance" {
     port                  = 3000
     protocol              = "Http"
     request_timeout       = 60
-    # probe_name            = local.probe_name_ui
+    probe_name            = local.probe_name_ui
   }
-  # probe {
-  #   name                = local.probe_name_ui
-  #   host                = "127.0.0.1"
-  #   interval            = 30
-  #   timeout             = 30
-  #   unhealthy_threshold = 3
-  #   protocol            = "Http"
-  #   port                = 80
-  #   path                = "/ui/healthcheck.html"
-  # }
+  probe {
+    name                = local.probe_name_ui
+    host                = "127.0.0.1"
+    interval            = 30
+    timeout             = 30
+    unhealthy_threshold = 3
+    protocol            = "Http"
+    port                = 80
+    path                = "/ui/healthcheck.html"
+  }
 
   request_routing_rule {
     name                       = local.request_routing_rule_api
