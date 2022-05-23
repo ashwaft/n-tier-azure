@@ -18,6 +18,7 @@ provider "azurerm" {
 resource "azurerm_resource_group" "rg" {
   name     = "${local.group_name}-rg"
   location = var.resource_group_location
+  tags = local.common_tags
 }
 
 
