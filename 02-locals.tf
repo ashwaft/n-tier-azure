@@ -6,6 +6,7 @@ locals {
     "110" : "443",
     "120" : "3000"
     "130" : "22"
+
   }
 
   api_inbound_ports = {
@@ -59,7 +60,7 @@ locals {
 
   azure_username   = "azureuser"
   azure_public_key = file("${path.module}/ssh-key/terraform-azure.pub")
-  environment = var.environment
+  environment      = var.environment
 
   common_tags = {
     environment = local.environment
