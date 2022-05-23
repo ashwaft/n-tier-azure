@@ -59,7 +59,8 @@ locals {
 
   azure_username   = "azureuser"
   azure_public_key = file("${path.module}/ssh-key/terraform-azure.pub")
-
+  environment = var.environment
+  
   common_tags = {
     environment = local.environment
   }
