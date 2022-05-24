@@ -6,7 +6,6 @@
 trigger:
 - main
 
-# Stage-1:
 stages:
 - stage: Build
   displayName: Build Stage
